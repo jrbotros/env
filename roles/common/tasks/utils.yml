@@ -17,3 +17,12 @@
   homebrew_cask:
     name: rectangle
     state: present
+
+- name: Install app store CLI
+  homebrew:
+    name: mas
+    state: present
+
+- name: Install notes app
+  # Bear: https://apps.apple.com/us/app/bear/id1091189122?mt=12
+  command: mas install 1091189122
