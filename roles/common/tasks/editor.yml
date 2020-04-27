@@ -13,6 +13,8 @@
   command: code --install-extension {{ item }}
   loop:
     - coenraads.bracket-pair-colorizer
+    - eamodio.gitlens
     - esbenp.prettier-vscode
+    - mohsen1.prettify-json
 
 # TODO(jbotros): Set more preferences (e.g., newline on save)
