@@ -1,0 +1,7 @@
+- include_tasks: profile.yml
+- include_tasks: editor.yml
+- include_tasks: utils.yml
+
+# Consider moving into separate roles
+- include_tasks: node.yml
+- include_tasks: python.yml

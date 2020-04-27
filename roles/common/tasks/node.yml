@@ -1,0 +1,17 @@
+- name: Install nvm
+  homebrew:
+    name: nvm
+    state: present
+
+- name: Configure nvm
+  blockinfile:
+    path: "{{ settings_path }}"
+    create: yes
+    block: |
+      export NVM_DIR="$HOME/.nvm"
+      source $(brew --prefix nvm)/nvm.sh
+
+- name: Install node
+  shell: source $(brew --prefix nvm)/nvm.sh && \
+    nvm install {{ node_version }} && \
+    nvm alias default {{ node_version }}

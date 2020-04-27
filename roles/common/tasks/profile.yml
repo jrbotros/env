@@ -1,0 +1,13 @@
+- name: Touch settings file
+  file:
+    path: "{{ settings_path }}"
+    state: touch
+
+- name: Add settings to shell startup
+  lineinfile:
+    path: "{{ item }}"
+    create: yes
+    line: source {{ settings_path }}
+  loop:
+    - ~/.zshrc
+    - ~/.bash_profile

@@ -1,0 +1,19 @@
+- name: Install common packages
+  homebrew:
+    name:
+      - curl
+      - git
+      - shellcheck
+      - wget
+    state: present
+
+# TODO(jbotros): Figure out how to allow in accessibility list
+- name: Install clipboard manager
+  homebrew_cask:
+    name: flycut
+    state: present
+
+- name: Install window manager
+  homebrew_cask:
+    name: rectangle
+    state: present

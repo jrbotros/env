@@ -1,0 +1,9 @@
+#!/usr/bin/env ansible-playbook
+- hosts: localhost
+  connection: local
+  vars:
+    node_version: 12.16.2
+    python_version: 3.8.2
+    settings_path: ~/.env_settings
+  roles:
+  - common

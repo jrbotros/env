@@ -1,0 +1,21 @@
+- name: Install pyenv
+  homebrew:
+    name: pyenv
+    state: present
+
+- name: Add pyenv to path
+  lineinfile:
+    path: "{{ settings_path }}"
+    create: yes
+    line: export PATH="$HOME/.pyenv/shims:$PATH"
+
+- name: Install python
+  command: pyenv install --skip-existing {{ python_version }}
+
+- name: Configure global python
+  command: pyenv global system {{ python_version }}
+
+- name: Install python autoformatter
+  homebrew:
+    name: black
+    state: present
