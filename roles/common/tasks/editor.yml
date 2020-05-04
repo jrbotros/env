@@ -16,5 +16,6 @@
     - eamodio.gitlens
     - esbenp.prettier-vscode
     - mohsen1.prettify-json
+    - mrmlnc.vscode-duplicate
 
 # TODO(jbotros): Set more preferences (e.g., newline on save)
