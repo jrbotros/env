@@ -22,6 +22,7 @@
     - eamodio.gitlens
     - editorconfig.editorconfig
     - esbenp.prettier-vscode
+    - letrieu.expand-region
     - mohsen1.prettify-json
     - mrmlnc.vscode-duplicate
 
